@@ -1,68 +1,69 @@
+# Menu for book_library.py.
 from book_library import Book, Library
 
 def main():
-    """Создание интерфейса"""
+    """Creating an interface"""
 
     library = Library()
     library.load_from_file('books.json')
 
     while True: # Menu
-        print("\n1. Добавить книгу")
-        print("2. Найти по автору")
-        print("3. Показать непрочитанные")
-        print("4. Отметить как прочитанную")
-        print("5. Выйти")
+        print("\n1. Add book")
+        print("2. Find by author")
+        print("3. Show unread")
+        print("4. Mark as read")
+        print("5. Exit")
 
-        choice = input("Выберите действие: ")
+        choice = input("Select an action: ")
 
         if choice == '1':
-            """Добавить книгу"""
-            title = input("Название: ").lower()
-            author = input("Автор: ").lower()
-            year = input("Год: ")
+            """Add a book"""
+            title = input("Name: ").lower()
+            author = input("Author: ").lower()
+            year = input("Year: ")
             book = Book(title, author, year)
             library.add_book(book)
-            print("Книга добавлена!")
+            print("The book has been added!")
 
         elif choice == '2':
-            """Найти по автору"""
-            author = input("Автор: ")
+            """Find by author"""
+            author = input("Authoe: ")
             books = library.find_by_author(author)
             if books:
                 for book in books:
                     print(book)
             else:
-                print("Книги не найдены")
+                print("No books found")
 
         elif choice == '3':
-            """Показать непрочитанные"""
+            """Show unread"""
             unread = library.unread_books()
 
             if unread:
-                print("Непрочитанные книги: ")
+                print("Unread books: ")
                 for book in unread:
                     print(book)
             else:
-                print("Нет непрочитанных книг.")
+                print("There are no unread books.")
 
         elif choice == '4':
-            """Отметить как прочитанную"""
-            title = input("Введите название книги: ").lower()
+            """Mark as read"""
+            title = input("Enter the title of the book: ").lower()
 
             found = False
             for book in library.books:
                 if book.title.lower() == title:
                     book.mark_as_read()
-                    print(f"Книга '{book.title}' отмечена как прочитанная")
+                    print(f"The book '{book.title}' is marked as read")
                     found = True
                     break
             if not found:
-                print("Книга не найдена.")
+                print("Book not found.")
 
         else:
-            """Выход"""
+            """Exit"""
             library.save_to_file('books.json')
-            print("Сохранено. До свидания!")
+            print("Saved. Goodbye!")
             break
 
                     
