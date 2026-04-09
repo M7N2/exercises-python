@@ -27,7 +27,7 @@ def main():
 
         elif choice == '2':
             """Find by author"""
-            author = input("Authoe: ")
+            author = input("Author: ")
             books = library.find_by_author(author)
             if books:
                 for book in books:
