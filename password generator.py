@@ -9,25 +9,25 @@ users_list = ['oliver', 'michael', 'tomas', 'kate']
 
 
 def generate_password(length):
-    """генератор паролей из all_chars"""
+    """Password generator from all_chars"""
     while True:
         password = ''
         for i in range(length):
             password += choice(all_chars)
         return password
 
-# Test        
+# Test.        
 password_1 = generate_password(8)
 print(password_1)
 
 
 def check_password_strength(password):
-    """проверка пароля на: длину строки, заглавную букву и цифру"""
+    """Check password for: string length, capital letter and number"""
     length_ok = False
     has_upper = False
     has_digit = False
    
-    if len(password) >= 8:  # проверка длины
+    if len(password) >= 8:  # Length check.
         length_ok = True
     else:
         length_ok = False   
