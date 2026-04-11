@@ -32,17 +32,17 @@ def check_password_strength(password):
     else:
         length_ok = False   
     
-    for char in password: # проверка на заглавную букву
+    for char in password:  # Check for capitalization.
         if char.isupper():
             has_upper = True
             break
     
-    for char in password: # проверка на наличие цифры
+    for char in password:  # Check for the presence of a number.
         if char.isdigit():
             has_digit = True
             break
 
-    if length_ok and has_upper and has_digit: # оценка силы пароля
+    if length_ok and has_upper and has_digit:  # Password strength assessment.
         return "Strong"
     elif ((length_ok and has_upper) or
         (length_ok and has_digit) or
@@ -56,16 +56,16 @@ print(check_password_strength(password_1))
 
 
 def create_user_passwords(users):
-    """добавляем список имен пользователей, генерация паролей для каждого"""
-    user_passwords = {} # пустой словарь
+    """Add a list of usernames and generate passwords for each."""
+    user_passwords = {}  # Empty dict.
     for user in users:
         password = generate_password(8)
-        user_passwords[user] = password # заполнение словаря
+        user_passwords[user] = password  # Filling out the dictionary.
     return user_passwords
 
        
 def show_user_passwords(users):
-    """отображает список пользователей и их пароли"""
+    """Displays a list of users and their passwords"""
     users_and_passwords = create_user_passwords(users)
     print("\nUsers and passwords:")
     for name, password in users_and_passwords.items():
