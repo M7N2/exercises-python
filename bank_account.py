@@ -1,17 +1,17 @@
 class BankAccount():
-    """Класс банковский счет"""
+    """Class Bank account"""
 
     def __init__(self, owner, balance=0):
         self.owner = owner
         self.balance = balance
 
     def deposit(self, amount):
-        """Пополнение счета"""
+        """Account replenishment"""
         self.balance += amount
         return self.balance
 
     def withdraw(self, amount):
-        """Снятие со счета"""
+        """Withdrawal from account"""
         if self.balance >= amount:
             self.balance -= amount
             return self.balance
