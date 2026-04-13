@@ -1,3 +1,4 @@
+# Simple operations with a bank account.
 class BankAccount():
     """Class Bank account"""
 
