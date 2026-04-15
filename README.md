@@ -6,3 +6,6 @@ Python exercises for training.
   - main_menu (for book library).py
 2.
  - password_generator
+3.
+- bank_account.py
+- test_bank_account.py
