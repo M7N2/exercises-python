@@ -9,3 +9,5 @@ Python exercises for training.
 3.
 - bank_account.py
 - test_bank_account.py
+4.
+- shopping_basket
