@@ -14,11 +14,11 @@ for i in numbers:
         count8 += 1
 print(f"чисел 15: {count15}, чисел 8: {count8}\n")    
 
-#без повторений
-numbers_set = list(set(numbers)) #чтобы сохранился порядок и список
+# Without repetitions.
+numbers_set = list(set(numbers))  # To maintain order and the list.
 print(numbers_set)
 
-#среднее арифметическое
+# Arithmetic mean.
 summ = sum(numbers)
 count = len(numbers)
 average = summ/count
