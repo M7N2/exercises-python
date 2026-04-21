@@ -12,7 +12,7 @@ for i in numbers:
         count15 += 1
     if i == 8:
         count8 += 1
-print(f"чисел 15: {count15}, чисел 8: {count8}\n")    
+print(f"numbers 15: {count15}, numbers 8: {count8}\n")    
 
 # Without repetitions.
 numbers_set = list(set(numbers))  # To maintain order and the list.
@@ -22,4 +22,4 @@ print(numbers_set)
 summ = sum(numbers)
 count = len(numbers)
 average = summ/count
-print(f"Среднее арифметическое = {average:.2f}")
+print(f"Arithmetic mean = {average:.2f}")
