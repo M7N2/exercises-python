@@ -11,3 +11,5 @@ Python exercises for training.
 - test_bank_account.py
 4.
 - shopping_basket
+5.
+- numbers_list.py
