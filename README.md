@@ -13,3 +13,5 @@ Python exercises for training.
 - shopping_basket
 5.
 - numbers_list.py
+6.
+- active/not active members.py
