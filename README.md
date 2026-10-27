@@ -15,3 +15,6 @@ Python exercises for training.
 - numbers_list.py
 6.
 - active/not active members.py
+7.
+- Official Joke API (This task requires the installation of the pandas library)
+    
